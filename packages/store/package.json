@@ -1,0 +1,11 @@
+{
+  "name": "@rabota/store",
+  "version": "0.0.1",
+  "description": "Business Login Layer",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
+    "@rabota/utils": "^0.0.1"
+  }
+}

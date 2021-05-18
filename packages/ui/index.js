@@ -1,0 +1,1 @@
+exports.default.content = 'ui'
