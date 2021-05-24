@@ -86,11 +86,11 @@ export enum EFontSize {
   h5 = '16px',
   h6 = '14px',
   large = '18px',
-  medium = '16px',
-  small1 = '14px',
-  small2 = '14px',
-  xsmall1 = '12px',
-  xsmall2 = '12px',
+  medium = '14px',
+  small1 = '12px',
+  small2 = '12px',
+  xsmall1 = '10px',
+  xsmall2 = '10px',
 }
 
 export enum ELineHeight {
@@ -101,10 +101,10 @@ export enum ELineHeight {
   h5 = '24px',
   h6 = '22px',
   large = '24px',
-  medium = '24px',
-  small1 = '22px',
+  medium = '22px',
+  small1 = '20px',
   small2 = '18px',
-  xsmall1 = '18px',
+  xsmall1 = '16px',
   xsmall2 = '12px',
 }
 
@@ -124,10 +124,12 @@ export enum ERadius {
   small = '2px',
   medium = '4px',
   large = '8px',
+  xlarge = '12px',
+  xxlarge = '16px',
 }
 
 export enum EShadow {
-  small = `0 2px 5px 0 rgba(3, 15, 35, 0.15)`,
+  small = ` 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 6px rgba(0, 0, 0, 0.07)`,
   medium = `0 15px 20px 0 rgba(3, 15, 35, 0.1), 0 0 10px 0 rgba(3, 15, 35, 0.05)`,
   large = `0 25px 30px 0 rgba(3, 15, 35, 0.1), 0 0 20px 0 rgba(3, 15, 35, 0.05)`,
 }

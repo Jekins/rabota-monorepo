@@ -15,8 +15,6 @@ const MainContainer = styled.div`
 `
 
 const Main = styled.div`
-  backdrop-filter: blur(20px);
-
   a,
   button {
     &,
@@ -31,31 +29,12 @@ const Main = styled.div`
       color: ${sv.color[item]};
     `
   )};
-
-  ${sm.mod(EModHeaderColor.black)`
-    background-color: transparent;
-    color: ${sv.color[EHeaderColor.black]};
-
-    ${MainContainer} {
-      position: relative;
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: ${sv.spacing.small};
-        right: ${sv.spacing.small};
-        height: 1px;
-        background-color: ${sv.color.gray9};
-      }
-    }
-  `};
 `
 
 const Block = styled.header`
   position: relative;
   z-index: 10;
+  box-shadow: ${sv.shadow.small};
 `
 
 export default { Block, MainContainer, Main, LogoLink }

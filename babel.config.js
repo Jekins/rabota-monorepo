@@ -4,10 +4,10 @@ const babelConfig = (api) => {
   const presets = [
     'next/babel',
     ['@babel/preset-typescript', { isTSX: true, allExtensions: true }],
-    'inline-react-svg',
   ]
 
   const plugins = [
+    'inline-react-svg',
     ['styled-components', { ssr: true, fileName: true }],
     '@babel/plugin-proposal-nullish-coalescing-operator',
   ]

@@ -7,4 +7,7 @@ export interface IIconProps extends IPropWidth, IPropHeight, IModColor {
 
   /** Прозрачность иконки */
   opacity?: string
+
+  /** Импортим svg иконку и передаем ее в этот параметр */
+  as: string
 }

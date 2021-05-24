@@ -14,6 +14,7 @@ const Box: FC<IBoxProps> = (props) => {
     resetLastSpacing = true,
     shadowSize,
     radius = 'large',
+    border,
     ...otherProps
   } = props
   const spacingValue = useVHSpacing(spacing)
@@ -26,6 +27,7 @@ const Box: FC<IBoxProps> = (props) => {
       resetLastSpacing={resetLastSpacing}
       shadowSize={shadowSize}
       radius={radius}
+      border={border}
       {...otherProps}
     >
       {children}

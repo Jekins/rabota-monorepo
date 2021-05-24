@@ -13,7 +13,12 @@ import {
   IModSpacingH,
   IModSpacingV,
 } from '@rabota/utils/helpers/styles/mod.types'
-import { EModResetLastSpacing, IModResetLastSpacing } from '../types'
+import {
+  EModBorder,
+  EModResetLastSpacing,
+  IModBorder,
+  IModResetLastSpacing,
+} from '../types'
 
 const Block = styled.div<
   StyledProps<
@@ -22,7 +27,8 @@ const Block = styled.div<
       IModColorBgText &
       IModResetLastSpacing &
       IModShadowSize &
-      IModRadius
+      IModRadius &
+      IModBorder
   >
 >`
   ${sm.mod(EModResetLastSpacing.true)`
@@ -59,6 +65,12 @@ const Block = styled.div<
   ${Object.keys(EModRadius).map(
     (item) => sm.mod(EModRadius[item])`
       border-radius: ${sv.radius[item]};
+    `
+  )};
+
+  ${Object.keys(EModBorder).map(
+    (item) => sm.mod(EModBorder[item])`
+      border: 1px solid ${sv.color[item]};
     `
   )};
 `

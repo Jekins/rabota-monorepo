@@ -16,7 +16,7 @@ export interface IBoxProps
     IModShadowSize,
     IModRadius {}
 
-export interface IPropBoxSpacing extends IModSpacing<TModSpacing[]> {}
+export interface IPropBoxSpacing extends IModSpacing<TModSpacing[]>, IModBorder {}
 
 export enum EModResetLastSpacing {
   true = 'resetLastSpacing=true',
@@ -25,4 +25,12 @@ export enum EModResetLastSpacing {
 
 export interface IModResetLastSpacing {
   resetLastSpacing?: boolean
+}
+
+export enum EModBorder {
+  gray15 = 'border=gray15',
+}
+
+export interface IModBorder {
+  border?: keyof typeof EModBorder
 }

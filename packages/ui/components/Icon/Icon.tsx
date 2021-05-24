@@ -6,18 +6,19 @@ const { Block } = SC
 
 /** Базовый компонент для генерации иконок */
 const Icon: FC<IIconProps> = (props) => {
-  const { id, width = '24px', height = '24px', opacity, ...otherProps } = props
+  const { width = '24px', height = '24px', opacity, as, ...otherProps } = props
+
   return (
     <Block
+      as={as}
+      viewBox='0 0 10 10'
       css={`
         width: ${width};
         height: ${height};
         opacity: ${opacity};
       `}
       {...otherProps}
-    >
-      <use xlinkHref={`#${id}`} />
-    </Block>
+    />
   )
 }
 

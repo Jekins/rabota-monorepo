@@ -4,7 +4,7 @@ import { EHeaderColor } from '../types'
 import { sliceName } from './constants'
 
 const initialState = {
-  color: 'black' as keyof typeof EHeaderColor,
+  color: 'white' as keyof typeof EHeaderColor,
 }
 
 export default createSlice({

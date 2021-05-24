@@ -14,7 +14,7 @@ import { SidebarContent } from '../SidebarContent/touch'
 const Sidebar = dynamic(() => import('@rabota/ui/components/Sidebar/touch'))
 
 const Layout: FC<ILayoutProps> = (props) => {
-  const { isLayout, isTouch, children } = props
+  const { isTouch, children } = props
 
   const [isSidebarOpen, toggleSidebarOpen] = useToggle(false)
 
@@ -28,27 +28,23 @@ const Layout: FC<ILayoutProps> = (props) => {
     </>
   )
 
-  if (isLayout) {
-    if (isTouch) {
-      return (
-        <LayoutTouch
-          Sidebar={<SidebarTouch />}
-          Header={<HeaderTouch toggleSidebar={toggleSidebarOpen} />}
-          Footer={<FooterTouch />}
-        >
-          {children}
-        </LayoutTouch>
-      )
-    }
-
+  if (isTouch) {
     return (
-      <LayoutDesktop Header={<HeaderDesktop />} Footer={<FooterDesktop />}>
+      <LayoutTouch
+        Sidebar={<SidebarTouch />}
+        Header={<HeaderTouch toggleSidebar={toggleSidebarOpen} />}
+        Footer={<FooterTouch />}
+      >
         {children}
-      </LayoutDesktop>
+      </LayoutTouch>
     )
   }
 
-  return <>{children}</>
+  return (
+    <LayoutDesktop Header={<HeaderDesktop />} Footer={<FooterDesktop />}>
+      {children}
+    </LayoutDesktop>
+  )
 }
 
 export default Layout

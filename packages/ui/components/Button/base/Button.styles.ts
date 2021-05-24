@@ -85,8 +85,10 @@ const Block = styled.div<
   transition: ${sv.duration.fast};
   border: none;
   touch-action: manipulation;
-  font-weight: ${sv.fontWeight.semibold};
+  font-weight: ${sv.fontWeight.regular};
+  font-size: ${sv.fontSize.medium};
   position: relative;
+  white-space: nowrap;
 
   &:hover {
     text-decoration: none;
@@ -150,14 +152,12 @@ const Block = styled.div<
 
   ${sm.mod(EModButtonSize.small)`
     padding: ${sv.spacing.xxsmall} ${sv.spacing.small};
-    font-size: ${sv.fontSize.medium};
     line-height: ${sv.lineHeight.medium};
     height: 32px;
   `};
 
   ${sm.mod(EModButtonSize.medium)`
     padding: ${sv.spacing.xsmall} ${sv.spacing.medium};
-    font-size: ${sv.fontSize.large};
     line-height: ${sv.lineHeight.large};
     height: 40px;
   `};
